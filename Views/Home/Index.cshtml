@@ -1,0 +1,18 @@
+﻿@* файл /Views/Home/Index.cshtml *@
+
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "/Views/Shared/_Layout.cshtml"; @* ссылка на файл с разметкой страницы *@
+}
+
+<h3>  Welcome to the Checkers Club! </h3>
+
+<p> Enjoy playing checkers with people from around the world.  </p>
+
+<p>Вы можете ознакомиться с видами <a href="/Home/Profile"> шашечных досок </a>! </p>
+
+@section Footer {
+               Copyright© Checkers_Club.com, @DateTime.Now.Year. All rights reserved
+}
+
+

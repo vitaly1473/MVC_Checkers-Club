@@ -1,0 +1,15 @@
+﻿@* файл  Profile.cshtml *@
+
+@using MVC_Checkers_Club.Models
+@model IEnumerable<Picture>
+
+<h2> Виды шашечных досок:</h2>
+
+<div style="display:flex">
+	@foreach(var pic in Model) {
+		<div style ="margin: 10px;">
+			<img src="/@pic.ImagePath" height="200px">
+			<p><i>prompt:</i> @pic.Prompt</p>
+		</div>
+	}
+</div>

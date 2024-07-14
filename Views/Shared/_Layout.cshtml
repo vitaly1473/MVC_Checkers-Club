@@ -1,0 +1,40 @@
+﻿<!-- add to folder Home/Shared файл _Layout.cshtml    -->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style>
+        
+        body {
+            display: flex; /* Flexbox для обеспечения растяжения содержимого и прижатия подвала к низу */
+            flex-direction: column; /* устанавливаем направление flex-контейнера на колонку */
+            margin: 0 15px;
+            padding: 5px 10px 0;
+            /*background-color: rgb(240, 240, 240); /* серый цвет, фон всей страницы */
+            background-color: rgb(135, 160, 245);
+            font-family: Verdana, sans-serif; /* стиль шрифта Verdana без засечек */
+            font-size: 18px;
+            color: black; /* цвет текста */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f1f1f1;
+            width: 100%;
+            margin-top: auto; /* прижимаем footer к низу */
+        }
+    </style>
+</head>
+<body>
+    <h2>@ViewBag.Title</h2> <!-- Здесь задается значение ViewBag.Title, которое применяется на мастер-странице для вывода заголовка -->
+    <div><a href="/">Home</a> | <a href="/Home/About"> History checkers </a></div>
+    <div>
+        @RenderBody() <!-- Этот метод будет вставлять содержимое страниц Razor, которые используют данную мастер-страницу -->
+    </div>
+    <footer>@RenderSection("Footer")</footer> <!-- специальный метод RenderSection() для вставки секций -->
+</body>
+</html>
